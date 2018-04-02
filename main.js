@@ -16,12 +16,13 @@ function setOpacity(){
     }
 }
 
-window.onload = function () {
- 
-    timer = setInterval(setOpacity, 25);
-
-};
 function scrollToAbout(){
-    alert("click");
+    $("html, body").animate({ scrollTop: $("#about").offset().top-Number($("#about-div").css("padding-bottom").substring(0,2))}, 1500);
+    return true;
 }
-document.getElementById("getStarted").onclick = scrollToAbout;
+
+window.onload = function () {
+    
+    timer = setInterval(setOpacity, 25);
+};
+
