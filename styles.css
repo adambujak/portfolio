@@ -26,7 +26,7 @@ html, body{
     height: 100%;
     width: 100%;
     margin:auto;
-    background: url("intro2.jpg");
+    background: url("src/intro.jpg");
     
     display: table;
     background-attachment: fixed;
@@ -82,7 +82,7 @@ html, body{
 }
 .profile{
     float: left;
-    max-height: 7em;
+    max-height: 15em;
     padding-bottom: 0.5em;
     padding-right: 1em;
     padding-top: 1em;
@@ -186,9 +186,9 @@ html, body{
 .main{
     font-family: 'Open Sans', sans-serif;
     text-align: left;
-    padding: 1em;
-   
-    padding-top: 0.01em
+    padding: 12em;
+    line-height: 3em;
+    padding-top: 0.01em;
   
 }
 .header{
