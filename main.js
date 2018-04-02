@@ -17,7 +17,7 @@ function setOpacity(){
 }
 
 function scrollToAbout(){
-    $("html, body").animate({ scrollTop: $("#about").offset().top-Number($("#about-div").css("padding-bottom").substring(0,2))+3}, 1500); // get rid of +3 find out why it's not at top
+    $("html, body").animate({ scrollTop: $("#about").offset().top-Number($("#about-div").css("padding-bottom").substring(0,2))}, 1500); // get rid of +3 find out why it's not at top
     return true;
 }
 
