@@ -1,23 +1,26 @@
 @import
     url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,900');
-.header{
-     background-color:#313131;
-     font-family: 'Open Sans', sans-serif;
-     color: white;
-     margin-right: 0px;
-     min-height: 50px;
-}
+
 html, body{
     margin:0;
     height:100%;
     width: 100%;
     color: black;
-    width: 100%;
-    
+    width: 100%;    
     font-family: 'Open Sans', sans-serif;
-   
 }
 
+.header{
+    position: absolute;
+    margin:1em;
+    opacity:0.5;
+    font-weight:300;
+    font-size: 1.5em;
+    opacity: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #E1EFE9;
+    line-height: 70%;
+}
 
 .intro{
     height: 100%;
@@ -31,6 +34,7 @@ html, body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .btn{
     font-family: "Open Sans", sans-serif;
     font-size: 1.35em;
@@ -53,30 +57,15 @@ html, body{
     text-decoration: none;
     text-transform: uppercase;
     border: solid;
-    color: #E1EFE9;
-    border-color: #E1EFE9;
     border-radius: 0.35em;
     padding-left: 0.35em;
     padding-right: 0.35em;
     padding-top: 0.1em;
     padding-bottom: 0.1em;
+    color: #E1EFE9;
+    border-color: #E1EFE9;
 }
-.footer{
-     position: absolute;
-     bottom = 0;
-     background-color:#313131;
-     font-family: 'Open Sans', sans-serif;
-     color: white;
-     width: 100%;
-     font-size:0.2em;
-     min-height: 50px;
-     margin-bottom: 0px;
-     padding-bottom: 0px;
-}
-.logo{
-    max-width: 10%;
-    
-}
+
 .profile{
     float: left;
     max-height: 15em;
@@ -91,6 +80,8 @@ html, body{
     width: 100%;
     max-width: none;
 }
+
+/*main intro text*/
 .content{
     max-width: 100%;
     margin:  0 auto;
@@ -116,18 +107,6 @@ html, body{
     font-family: 'Open Sans', sans-serif;
     color: #E1EFE9;
     line-height: 125%;
-}
-
-.intro-img{
-    min-height: 100%;
-}
-
-.main{
-    font-family: 'Open Sans', sans-serif;
-    text-align: left;
-    padding: 12em;
-    line-height: 3em;
-    padding-top: 0.01em;
 }
 
 @media only screen and (max-width: 47rem ){ /*mobile*/
@@ -192,25 +171,7 @@ html, body{
     }
 
 }
-
-
-@media only screen and (max-width: 45rem ){ /*mobile*/
-    .main{
-        font-family: 'Open Sans', sans-serif;
-        text-align: left;
-        padding: 1em;
-        line-height: 3em;
-        padding-top: 0.01em;
-    }
-}
-@media only screen and (min-width: 90rem ){ /*bigboy screen*/
-    .main{
-        font-family: 'Open Sans', sans-serif;
-        text-align: left;
-        padding: 13em;
-        line-height: 3em;
-        padding-top: 0.01em;
-    }
+@media only screen and (min-width: 95rem ){ /*bigboy screen*/
     .content{
         max-width: 75rem;
         margin:  0 auto;
@@ -239,7 +200,7 @@ html, body{
     }
     .btn{
         font-family: "Open Sans", sans-serif;
-        font-size: 1.75em;
+        font-size: 1.35em;
         font font-weight: 400;
         color: #25242a;
         text-decoration: none;
@@ -255,31 +216,47 @@ html, body{
         transition: all 0.5s;
     }
     .btn:hover, .btn:focus{
-        font-family: "Open Sans", sans-serif;
-        font-size: 2em;
-        font font-weight: 400;
-        
         text-decoration: none;
         text-transform: uppercase;
         border: solid;
         color: #E1EFE9;
         border-color: #E1EFE9;
-        border-radius: 0.5em;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
-        padding-top: 0.2em;
-        padding-bottom: 0.2em;
     }
+}
 
-}
-.header{
-    position: absolute;
-    margin:1em;
-    opacity:0.5;
-    font-weight:300;
-    font-size: 1.5em;
-    opacity: 0;
+/*to here*/
+
+.main{ /*main body text*/
     font-family: 'Open Sans', sans-serif;
-    color: #E1EFE9;
-    line-height: 70%;
+    text-align: left;
+    padding: 12em;
+    line-height: 3em;
+    padding-top: 0.01em;
 }
+
+@media only screen and (max-width: 45rem ){ /*mobile*/
+    .main{
+        font-family: 'Open Sans', sans-serif;
+        text-align: left;
+        padding: 1em;
+        line-height: 3em;
+        padding-top: 0.01em;
+    }
+}
+
+@media only screen and (min-width: 90rem ){ /*bigboy screen*/
+    .main{
+        font-family: 'Open Sans', sans-serif;
+        text-align: left;
+        padding: 13em;
+        line-height: 3em;
+        padding-top: 0.01em;
+    }
+}
+
+.parallax-window {
+	min-height: 400px;
+	background: transparent;
+}
+
+

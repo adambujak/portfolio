@@ -1,28 +1,31 @@
-var opacity = 1;
-var timer;
-var addVal = -0.01;
 
-function setOpacity(){
-    opacity+=addVal;
-    document.getElementById("welcome").style.opacity = ""+opacity;
-    if (opacity <= 0){ 
-        addVal*=-1;
-        document.getElementById("welcome").textContent="Take a look around.";
-        document.getElementById("div1").className = "content2"; //delete original
+
+function fadeInAndOut() {
+    var opacity = 1;
+    var timer;
+    var addVal = -0.01;
+    function fade() {
+        opacity += addVal;
+        document.getElementById("welcome").style.opacity = "" + opacity;
+        if (opacity <= 0){ 
+            addVal*=-1;
+            document.getElementById("welcome").textContent="Take a look around.";
+            document.getElementById("div1").className = "content2"; //delete original
+        }
+        else if (opacity >= 1) {
+            clearInterval(timer);
+
+        }
     }
-    else if (opacity >= 1){
-        clearInterval(timer);
-        
-    }
+    timer = setInterval(fade, 25);
 }
 
 function scrollToAbout(){
-    $("html, body").animate({ scrollTop: $("#about").offset().top-Number($("#about-div").css("padding-bottom").substring(0,2))}, 1500); // get rid of +3 find out why it's not at top
+    $("html, body").animate({ scrollTop: $("#about-div").offset().top+Number($("#about-div").css("padding-top").substring(0,2))}, 1500); 
     return true;
 }
 
 window.onload = function () {
-    
-    timer = setInterval(setOpacity, 25);
+    fadeInAndOut();
 };
 
