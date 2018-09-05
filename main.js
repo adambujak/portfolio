@@ -23,26 +23,25 @@ function fade(element, time, inOrOut, funcToExecuteOnEnd){
     }
     let timer = setInterval(fade, 17); //60 fps
 }
-window.onload = function onloadFunc(){
-    fadeWelcomeInAndOut();
+window.onload = function onloadFunc() {
+   fadeWelcomeInAndOut();
 };
-
-function scrollToAbout(){
-   // $("html, body").animate({ scrollTop: $("#about-div").offset().top+Number($("#about-div").css("padding-top").substring(0,2))}, 1500); 
-   
+function scrollToAbout() {
+   // $("html, body").animate({ scrollTop: $("#about-div").offset().top+Number($("#about-div").css("padding-top").substring(0,2))}, 1000); 
     acceleratedScroll($("#about-div").offset().top + Number($("#about-div").css("padding-top").substring(0,2)), 1000);
-    return true;
+    //return true;
 }
 function acceleratedScroll (target, time){
+    alert("adfs");
     var current = document.documentElement.scrollTop;
     var diff = target - current;
-    var smoothFactor = 25;
-    var accelerationFactor = diff / smoothFactor;
-    time /= smoothFactor;
-    diff /= smoothFactor;
+    var smoothFactor =  1000;
+    var accelerationFactor = 2*diff / ((time)*(time));
+    function getDistance (time) {
+       return time*time*accelerationFactor/2;
+    }
     for (var i = 0; i < smoothFactor; i ++){
-        current += diff * accelerationFactor * i;
-        $("html, body").animate({ scrollTop: current}, time);
+        $("html, body").animate({ scrollTop: current+getDistance(time/smoothFactor*i)}, time/smoothFactor);
     }
     
 }
